@@ -1,4 +1,5 @@
 # Basic if statement
+import random
 from operator import truediv
 
 age = 20
@@ -36,4 +37,37 @@ if age >= 18 and has_pass:
 else:
     print("You are not allowed entry")
 
+# Movie ticket
+
+if age <= 12:
+    print("The cost of your ticket is £5")
+if age >= 18:
+    print("The cost of your ticket is £10")
+else:
+    print("The cost of your ticket is £7")
+
+# Rock Paper Scissors
+
+list_of_moves = ['Rock' , 'Paper' , 'Scissors']
+player_move = input("Please enter your move (Rock, Paper, or scissors): ")
+player_move = player_move.lower()
+print(f"Your move is {player_move}")
+
+#Computer choice Rock Ppaper Scissors
+computer_choice = random.choice(list_of_moves)
+
+#Convert computer choice to lower case
+computer_choice = computer_choice.lower()
+print(f"Computer picks {computer_choice}")
+
+#Conditions of play
+if computer_choice == "rock" and player_move == "scissors":
+    print(f"Computer wins!!")
+elif computer_choice == "scissors" and player_move == "rock":
+    print("You win!!")
+
+
+# paper wins
+elif computer_choice == "rock" and player_move == "paper":
+    print("Computer wins!!")
 
